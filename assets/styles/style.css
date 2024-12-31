@@ -1,0 +1,398 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Kanit", sans-serif;
+  background-color: #040404;
+  color: #F3F3F3;
+  scroll-behavior: smooth;
+}
+
+.flex {
+  display: flex;
+}
+
+.contrast-text {
+  color: #D99323;
+}
+
+.btn-menu {
+  display: none;
+}
+
+.btn-menu i {
+  font-size: 2.6rem;
+}
+
+.mobile {
+  height: 100vh;
+  width: 0%;
+  overflow: hidden;
+  background-color: #040404;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 99999;
+  transition: 0.4s;
+}
+.mobile .btn-fechar {
+  padding: 20px 6%;
+}
+.mobile .btn-fechar i {
+  font-size: 1.5rem;
+}
+.mobile nav ul {
+  text-align: right;
+}
+.mobile nav ul li a {
+  display: block;
+  font-weight: 300;
+  padding: 20px 8%;
+}
+.mobile nav ul li:hover {
+  background-color: #D99323;
+}
+.mobile nav ul li a:hover {
+  margin-right: 3%;
+  color: #040404;
+}
+
+.mobile.open-menu {
+  width: 70%;
+}
+
+.overlay-menu {
+  background-color: rgba(4, 4, 4, 0.7882352941);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 88888;
+  display: none;
+}
+
+.mobile.open-menu ~ .overlay-menu {
+  display: block;
+}
+
+header {
+  width: 100%;
+  height: 15vh;
+  padding: 0 4%;
+  font-size: 1.2rem;
+  background-color: #040404;
+  justify-content: space-between;
+  align-items: center;
+}
+header .mh-container {
+  width: 40%;
+}
+header ul {
+  justify-content: space-between;
+}
+header ul li {
+  list-style-type: none;
+}
+header ul li a {
+  color: #F3F3F3;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.2s;
+}
+header .desktop ul li a:hover {
+  color: #969696;
+}
+header .rh-container a.btn-contato {
+  color: #D99323;
+  font-weight: 600;
+  text-decoration: none;
+  border: solid 3px #D99323;
+  border-radius: 7px;
+  padding: 8% 25%;
+  transition: 0.2s;
+}
+header .rh-container a.btn-contato:hover {
+  background-color: #D99323;
+  color: #040404;
+}
+
+main h2 {
+  font-size: 2rem;
+}
+main h3 {
+  font-size: 2.4rem;
+}
+main section.s-home {
+  width: 100%;
+  height: 100vh;
+  padding: 0 4%;
+  background-image: linear-gradient(to right, rgba(4, 4, 4, 0.7725490196) 0 100%), url("../images/background.gif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-direction: column;
+  justify-content: center;
+}
+main section.s-home h1 {
+  font-size: 2.8rem;
+  width: 45%;
+  margin-bottom: 10px;
+  line-height: 45px;
+}
+main section.s-home h2 {
+  font-size: 2.2rem;
+  width: 60%;
+  line-height: 45px;
+}
+main section.s-service {
+  width: 100%;
+  height: 100%;
+  padding: 80px 4%;
+  flex-direction: column;
+  align-items: center;
+  gap: 10%;
+}
+main section.s-service .service-container-top {
+  width: 100%;
+  align-items: center;
+  gap: 70px;
+  justify-content: space-evenly;
+}
+main section.s-service .service-container-top img, main section.s-service .service-container-top .titles {
+  width: 80%;
+}
+main section.s-service .service-container-bottom {
+  width: 100%;
+  align-items: center;
+  gap: 70px;
+  justify-content: space-evenly;
+}
+main section.s-service .service-container-bottom p {
+  font-size: 1.6rem;
+}
+main section.s-service .service-container-bottom p, main section.s-service .service-container-bottom img {
+  width: 80%;
+}
+main section.s-offers {
+  width: 100%;
+  height: 100%;
+  padding: 80px 4%;
+  background-image: linear-gradient(to right, rgba(4, 4, 4, 0.7725490196) 0 100%), url("../images/grill-3.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+main section.s-offers h2, main section.s-offers h3 {
+  text-align: center;
+  font-size: 1.8rem;
+}
+main section.s-offers .cards {
+  justify-content: space-between;
+  margin-top: 5%;
+}
+main section.s-offers .card {
+  text-align: center;
+  width: 19%;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+main section.s-offers .card img {
+  background-color: #D99323;
+  border-radius: 50%;
+  padding: 14px;
+  width: 50%;
+}
+main section.s-offers .card h4, main section.s-offers .card p {
+  font-size: 1.22rem;
+}
+main section.s-ratings {
+  width: 100%;
+  height: 100%;
+  padding: 80px 4%;
+}
+main section.s-ratings h2, main section.s-ratings h3 {
+  text-align: center;
+  font-size: 1.8rem;
+}
+main section.s-ratings .ratings {
+  justify-content: space-around;
+  margin-top: 5%;
+}
+main section.s-ratings .rating {
+  background-color: #F3F3F3;
+  color: #040404;
+  width: 21%;
+  padding: 15px;
+  border-radius: 17px;
+  font-size: 1.3rem;
+}
+main section.s-ratings .rating .profile {
+  align-items: center;
+  margin-bottom: 15px;
+}
+main section.s-ratings .rating .profile img {
+  margin-right: 7px;
+}
+main section.s-ratings .rating .profile .rp-container p {
+  font-weight: 600;
+}
+main section.s-contacts {
+  width: 100%;
+  height: 100%;
+  padding: 80px 4%;
+}
+main section.s-contacts h2, main section.s-contacts h3 {
+  text-align: center;
+  font-size: 1.8rem;
+}
+main section.s-contacts .sc-container {
+  width: 100%;
+  justify-content: space-evenly;
+  margin-top: 5%;
+}
+main section.s-contacts .sc-container .form-container {
+  width: 45%;
+}
+main section.s-contacts .sc-container .form-container form {
+  width: 65%;
+}
+main section.s-contacts .sc-container .form-container form .field {
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+main section.s-contacts .sc-container .form-container form .field label {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+main section.s-contacts .sc-container .form-container form .field input, main section.s-contacts .sc-container .form-container form .field textarea {
+  width: 100%;
+  color: #F3F3F3;
+  font-weight: 200;
+  font-size: 1.1rem;
+  padding: 7px;
+  border-radius: 7px;
+  background-color: transparent;
+  border: #F3F3F3 1px solid;
+  transition: 0.2s;
+}
+main section.s-contacts .sc-container .form-container form .field input:focus, main section.s-contacts .sc-container .form-container form .field textarea:focus {
+  outline: none;
+  border-radius: 12px;
+}
+main section.s-contacts .sc-container .form-container form input[type=submit] {
+  width: 100%;
+  margin-top: 15px;
+  font-size: 1.2rem;
+  border: #D99323 2px solid;
+  border-radius: 8px;
+  background-color: transparent;
+  color: #D99323;
+  padding: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+main section.s-contacts .sc-container .form-container form input[type=submit]:hover {
+  background-color: #D99323;
+  color: #040404;
+}
+main section.s-contacts .sc-container .form-container form input[type=submit]:active {
+  transform: scale(0.93);
+}
+main section.s-contacts .sc-container .infos-container {
+  width: 30%;
+  flex-direction: column;
+  gap: 50px;
+}
+main section.s-contacts .sc-container .infos-container .info {
+  align-items: center;
+  gap: 15px;
+}
+main section.s-contacts .sc-container .infos-container .info p {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+main section.s-contacts .sc-container .infos-container .info .bg-img {
+  background-color: #D99323;
+  border-radius: 50%;
+  padding: 5px;
+  align-items: center;
+  justify-content: center;
+}
+main section.s-contacts .sc-container .infos-container .info .bg-img img {
+  border-radius: 0%;
+  width: 65px;
+  background-color: transparent;
+}
+
+footer {
+  padding: 10px 4%;
+  background-color: #0A0A0A;
+}
+footer p {
+  font-size: 1.1rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+@media (max-width: 930px) {
+  .desktop {
+    display: none;
+  }
+  .btn-menu {
+    display: block;
+  }
+  .s-home h1 {
+    font-size: 1.5rem;
+  }
+  .s-home h2 {
+    font-size: 1.2rem;
+  }
+  .service-container-top {
+    flex-direction: column-reverse;
+  }
+  .service-container-bottom {
+    flex-direction: column;
+  }
+  .s-offers .cards {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .s-offers .cards .card {
+    flex-direction: row;
+    width: 100%;
+    text-align: left;
+  }
+  .s-offers .cards .card img {
+    width: 20%;
+  }
+  .s-offers .cards .card h4, .s-offers .cards .card p {
+    font-size: 1.15rem;
+  }
+  .ratings {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .s-ratings .ratings .rating {
+    width: 80%;
+  }
+  .sc-container {
+    flex-direction: column;
+    gap: 60px;
+  }
+  main section.s-contacts .sc-container .form-container,
+  main section.s-contacts .sc-container .infos-container {
+    width: 100%;
+  }
+  main section.s-contacts .sc-container .form-container form,
+  main section.s-contacts .sc-container .infos-container form {
+    width: 100%;
+  }
+}/*# sourceMappingURL=style.css.map */
